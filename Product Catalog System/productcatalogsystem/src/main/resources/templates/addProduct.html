@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add product</title>
+</head>
+<body>
+    <header>
+        <h3>Fill in and select "Add product" to add the product:</h3>
+    </header>
+
+    <section>
+        <div class="product-form">
+            <form action="/addProduct" method="post">
+                <label for="product-name">Product name</label> 
+                <!-- The for attribute of label element should match with input's id attribute to link them-->
+                <input type="text" name="name" id="product-name" required> <br><br>
+                <!-- The name attribute of this input element should match with the @RequestParam value at the controller to get the value -->
+                 
+                <label for="product-price">Product price</label>
+                <input type="number" name="price" id="product-price" required> <br><br>
+                
+                <label for="product-category">Product category</label>
+                <input type="text" name="category" id="product-category" required> <br><br>
+
+                <input type="submit" value="Add Product"> <br> <br>
+            </form>
+        </div>
+    </section>
+    
+    <footer>
+        <a href="/home">Back to home page</a>
+    </footer>
+</body>
+</html>
